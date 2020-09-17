@@ -1,6 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void numero(){
+    int arreglo[5];
+    int i;
+    int suma = 0;
+
+    for(i=0; i<5; i++){
+        scanf("%d", &arreglo[i]);
+    }
+
+    for(i=0; i<5; i++){
+        printf("%d ", arreglo[i]);
+        
+    }
+
+    for(i=0; i<5; i++){
+        suma += arreglo[i];
+    }
+
+    printf("\nSuma: %d", suma);
+    printf("\nPromedio: %.2f\n", suma/5.0);
+}
+
 int main(){
 
     char op;
@@ -17,6 +39,7 @@ int main(){
         switch (op)
         {
         case '1':
+            numero();
             break;
         
         case '2':
@@ -26,11 +49,12 @@ int main(){
         default:
             break;
         }
-
+        system("\npause");
+        system("cls");
+        
 
     }while (op != '0');
     
-
-    system("\npause");
+    
     return 0;
 }
